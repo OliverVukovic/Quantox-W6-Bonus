@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-6-bonus UNSPLASH API</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <section>
+        <div class="nav-bar">
+            <div class="logo">
+                <h2>Unsplash Images</h2>
+                <img class="camera" src="./images/camera-retro-solid.svg" alt="logo">
+            </div>
+    
+            <div class="search">
+                <input type="text" id="query" placeholder="Search...">
+                <i><img class="icon" onclick="loadImages()" src="./images/search-solid.svg" alt="icon"></i>
+            </div>
+        </div>  
+    </section>
+
+    <section>
+        <div class="photos" id="result">
+
+        </div>
+    </section>
+</body>
+</html>
