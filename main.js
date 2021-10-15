@@ -1,54 +1,4 @@
 
-
-/*
-
-const query = document.getElementById('query');
-const photo = document.getElementsByClassName('photos')[0];
-
-window.addEventListener('load', dayNightMode)
-
-search.addEventListener('keydown', function(event){
-    if(event.key === 'Enter')
-    loadImages();
-})
-
-function loadImages(){
-    removeImages();
-
-    const url = 'https://api.unsplash.com/search/photos/?query='+search.value+'&per_page=9&client_id=o0n0fKYBfRdWBbNpqpcAPS86Mq_KcFB5xYEdKGVJQus';
-
-    fetch(url)
-
-    .then(response => {
-                                     /*console.log(response);*/ /*
-        if(response.ok)
-            return response.json();
-        else
-            alert(response.status)
-})
-
-    .then(data => {
-        const imageNodes = [];
-        
-        for(let i = 0; i < data.results.length; i++){
-            imageNodes[i] = document.createElement('div');
-            imageNodes[i].className = 'img';
-            imageNodes[i].style.backgroundImage = 'url('+data.results[i].urls.raw+')';
-            imageNodes[i].addEventListener('dblclick', function(){
-                window.open(data.results[i].links.download, '_blank');
-            })
-            photos.appendChild(imageNodes[i]);
-        }
-    })
-
-}
-
-
- ----------------------------------------- */
-
-
-
-
 window.addEventListener('load', dayNightMode)
 
 function dayNightMode(){
@@ -66,12 +16,7 @@ function dayNightMode(){
 
 
 
-
-
-
-
-
- /* ----------------------------------------- */
+ /* ------- load photos --------- */
 
 
 function loadImages() {
@@ -89,17 +34,15 @@ function loadImages() {
         console.log(data);
 
         data.results.forEach(photo => {
-            let slika = document.createElement('div')
+            let picture = document.createElement('div')
             let result = `
             <img src="${photo.urls.regular}">
             <a href="${photo.links.download}">
             `;
             
-            slika.innerHTML = result;
+            picture.innerHTML = result;
 
-           document.getElementById("result").appendChild(slika)
-            // $("#result").append(result);
-            
+           document.getElementById("result").appendChild(picture)
         });
     });
 }
