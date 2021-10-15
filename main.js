@@ -1,3 +1,5 @@
+// -------  night mode --------
+
 
 window.addEventListener('load', dayNightMode)
 
@@ -5,18 +7,18 @@ function dayNightMode(){
     const date = new Date();
     const hour = date.getHours();
 
-    if(hour >= 7 && hour <= 19){            /* try || */ 
-    document.body.style.backgroundColor = 'white';
-    document.body.style.color = 'black';
+    if(hour >= 7 && hour <= 19){
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
     } else {
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
     }
 }
 
 
 
- /* ------- load photos --------- */
+ // ------- load photos --------- 
 
 
 function loadImages() {
