@@ -23,6 +23,7 @@ body {
 section {
     width: 95%;
     margin: auto;
+    padding: 5px;
 }
 
 .nav-bar {
